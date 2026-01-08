@@ -1,14 +1,58 @@
-Túra API - Backend Dokumentáció
+# TÚRA PORTÁL BACKEND - DOKUMENTÁCIÓ
 
-## Projekt áttekintés
+## TECHNOLÓGIÁK:
+- Node.js + Express (szerver)
+- MySQL (adatbázis)
+- Két változat: 1) Natív MySQL 2) Sequelize ORM
+- CORS, dotenv (segédkönyvtárak)
 
-**Projektnév:** Túra Portál Webalkalmazás Backend  
-**Cél:** Túraprogramok böngészése, foglalása, értékelése  
-**Technológiák:** Node.js, Express, MySQL, Sequelize ORM  
-**Két backend változat:** Natív MySQL és Sequelize ORM
+## 7 MODELL (TÁBLA):
+1. felhasznalok - felhasználók adatai
+2. turavezetok - túravezetők  
+3. programok - fizetős túrák
+4. nyitott_programok - ingyenes túrák
+5. foglalasok - ki mit foglalt (pivot N:M-hez)
+6. ertekelesek - értékelések (pivot N:M-hez)
+7. program_kategoria - kategóriák (pivot N:M-hez)
 
----
+## FŐ VÉGPONTOK:
 
-## Adatbázis séma
+1. FELHASZNÁLÓK:
+GET    /api/felhasznalok              # Összes felhasználó
+POST   /api/felhasznalok              # Új felhasználó
+GET    /api/felhasznalok/:id          # Egy felhasználó
 
-### 1. Táblák és kapcsolatok
+2. PROGRAMOK:
+GET    /api/programok                 # Fizetős túrák
+GET    /api/nyitott-programok         # Ingyenes túrák
+
+3. FOGLALÁSOK:
+GET    /api/foglalasok                # Összes foglalás
+POST   /api/foglalasok                # Új foglalás
+
+4. TÖBB-TÁBLÁS LEKÉRDEZÉSEK (fontos!):
+GET /api/felhasznalok/:id/foglalasok  # Felhasználó összes foglalása
+GET /api/programok-reszletes          # Programok kategóriákkal
+
+## INDÍTÁS:
+MySQL:      npm run dev       (http://localhost:3000)
+Sequelize:  node server_sequelize.js  (http://localhost:3001)
+
+## TESZTELÉS:
+- Minden végpont tesztelve ThunderClient-tel
+- Képernyőmentések: backend_screenshots mappa
+- Több-táblás lekérdezések működnek
+
+## PÉLDA KÉRÉS:
+POST /api/felhasznalok
+{
+  "felhasznalonev": "teszt",
+  "email": "teszt@email.hu",
+  "jelszo": "jelszo123",
+  "teljes_nev": "Teszt Felhasználó"
+}
+
+--- --- ---
+Csák Roland
+13/A
+2026.01.08.
