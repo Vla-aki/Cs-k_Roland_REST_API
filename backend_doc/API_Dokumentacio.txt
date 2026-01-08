@@ -1,0 +1,14 @@
+Túra API - Backend Dokumentáció
+
+## Projekt áttekintés
+
+**Projektnév:** Túra Portál Webalkalmazás Backend  
+**Cél:** Túraprogramok böngészése, foglalása, értékelése  
+**Technológiák:** Node.js, Express, MySQL, Sequelize ORM  
+**Két backend változat:** Natív MySQL és Sequelize ORM
+
+---
+
+## Adatbázis séma
+
+### 1. Táblák és kapcsolatok
