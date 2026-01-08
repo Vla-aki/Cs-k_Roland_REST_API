@@ -18,21 +18,21 @@ TECHNOLÓGIÁK:
 FŐ VÉGPONTOK:
 
 1. FELHASZNÁLÓK:
-GET    /api/felhasznalok              # Összes felhasználó
-POST   /api/felhasznalok              # Új felhasználó
-GET    /api/felhasznalok/:id          # Egy felhasználó
+GET    /api/felhasznalok               Összes felhasználó
+POST   /api/felhasznalok               Új felhasználó
+GET    /api/felhasznalok/:id           Egy felhasználó
 
 2. PROGRAMOK:
-GET    /api/programok                 # Fizetős túrák
-GET    /api/nyitott-programok         # Ingyenes túrák
+GET    /api/programok                  Fizetős túrák
+GET    /api/nyitott-programok          Ingyenes túrák
 
 3. FOGLALÁSOK:
-GET    /api/foglalasok                # Összes foglalás
-POST   /api/foglalasok                # Új foglalás
+GET    /api/foglalasok                 Összes foglalás
+POST   /api/foglalasok                 Új foglalás
 
 4. TÖBB-TÁBLÁS LEKÉRDEZÉSEK (fontos!):
-GET /api/felhasznalok/:id/foglalasok  # Felhasználó összes foglalása
-GET /api/programok-reszletes          # Programok kategóriákkal
+GET /api/felhasznalok/:id/foglalasok   Felhasználó összes foglalása
+GET /api/programok-reszletes           Programok kategóriákkal
 
 INDÍTÁS:
 MySQL:      npm run dev       (http://localhost:3000)
@@ -56,4 +56,5 @@ POST /api/felhasznalok
 Csák Roland
 13/A
 2026.01.08.
+
 
