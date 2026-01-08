@@ -35,7 +35,7 @@ GET /api/felhasznalok/:id/foglalasok   Felhasználó összes foglalása
 GET /api/programok-reszletes           Programok kategóriákkal
 
 INDÍTÁS:
-MySQL:      npm run dev       (http://localhost:3000)
+MySQL:      npm run dev               (http://localhost:3000)
 Sequelize:  node server_sequelize.js  (http://localhost:3001)
 
 TESZTELÉS:
@@ -56,5 +56,6 @@ POST /api/felhasznalok
 Csák Roland
 13/A
 2026.01.08.
+
 
 
